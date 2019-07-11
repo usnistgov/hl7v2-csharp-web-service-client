@@ -1,0 +1,12 @@
+C:\Users\Owner\source\repos\HL7ClientProject\HL7ClientProject\bin\HL7ClientProject.dll.config
+C:\Users\Owner\source\repos\HL7ClientProject\HL7ClientProject\bin\HL7ClientProject.dll
+C:\Users\Owner\source\repos\HL7ClientProject\HL7ClientProject\bin\HL7ClientProject.pdb
+C:\Users\Owner\source\repos\HL7ClientProject\HL7ClientProject\obj\Debug\HL7ClientProject.csproj.CoreCompileInputs.cache
+C:\Users\Owner\source\repos\HL7ClientProject\HL7ClientProject\obj\Debug\HL7ClientProject.dll
+C:\Users\Owner\source\repos\HL7ClientProject\HL7ClientProject\obj\Debug\HL7ClientProject.pdb
+C:\Users\Owner\source\repos\HL7ClientProject\HL7ClientProject\obj\Debug\HL7ClientProject.Properties.Resources.resources
+C:\Users\Owner\source\repos\HL7ClientProject\HL7ClientProject\obj\Debug\HL7ClientProject.csproj.GenerateResource.cache
+C:\Users\Owner\source\repos\HL7ClientProject\HL7ClientProject\obj\Debug\HL7ClientProject.csprojAssemblyReference.cache
+C:\Users\Owner\source\repos\HL7ClientProject\HL7ClientProject\bin\Newtonsoft.Json.dll
+C:\Users\Owner\source\repos\HL7ClientProject\HL7ClientProject\bin\Newtonsoft.Json.xml
+C:\Users\Owner\source\repos\HL7ClientProject\HL7ClientProject\obj\Debug\HL7ClientProject.csproj.CopyComplete

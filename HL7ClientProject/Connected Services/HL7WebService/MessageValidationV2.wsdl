@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://gov.nist.healthcare.hl7ws/validation/message" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://messagevalidation.hl7ws.healthcare.nist.gov/" name="MessageValidationV2" targetNamespace="http://gov.nist.healthcare.hl7ws/validation/message" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://messagevalidation.hl7ws.healthcare.nist.gov/" location="https://hit-dev.nist.gov:8090/hl7v2ws/services/soap/MessageValidationV2?wsdl=MessageValidationV2Interface.wsdl" />
+  <wsdl:types />
+  <wsdl:binding name="MessageValidationV2SoapBinding" type="ns1:MessageValidationV2Interface">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validate">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="validate">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="validateResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loadResource">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="loadResource">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="loadResourceResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateDQA">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="validateDQA">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="validateDQAResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateWithResources">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="validateWithResources">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="validateWithResourcesResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getServiceStatus">
+      <soap12:operation soapAction="" style="document" />
+      <wsdl:input name="getServiceStatus">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getServiceStatusResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MessageValidationV2">
+    <wsdl:port name="MessageValidationV2ServicePort" binding="tns:MessageValidationV2SoapBinding">
+      <soap12:address location="https://hit-dev.nist.gov:8090/hl7v2ws/services/soap/MessageValidationV2" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

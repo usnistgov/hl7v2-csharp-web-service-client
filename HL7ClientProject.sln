@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HL7ClientProject", "HL7ClientProject\HL7ClientProject.csproj", "{D1E8C40D-4E79-4B34-B497-F2D49D82EC54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1E8C40D-4E79-4B34-B497-F2D49D82EC54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1E8C40D-4E79-4B34-B497-F2D49D82EC54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1E8C40D-4E79-4B34-B497-F2D49D82EC54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1E8C40D-4E79-4B34-B497-F2D49D82EC54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6F9328C-815D-4972-8424-1156BB5C8A86}
+	EndGlobalSection
+EndGlobal

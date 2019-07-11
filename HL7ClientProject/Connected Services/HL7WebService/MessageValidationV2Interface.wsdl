@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://messagevalidation.hl7ws.healthcare.nist.gov/" name="MessageValidationV2Interface" targetNamespace="http://messagevalidation.hl7ws.healthcare.nist.gov/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:tns="http://messagevalidation.hl7ws.healthcare.nist.gov/" elementFormDefault="unqualified" targetNamespace="http://messagevalidation.hl7ws.healthcare.nist.gov/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getServiceStatus" type="tns:getServiceStatus" />
+      <xs:element name="getServiceStatusResponse" type="tns:getServiceStatusResponse" />
+      <xs:element name="loadResource" type="tns:loadResource" />
+      <xs:element name="loadResourceResponse" type="tns:loadResourceResponse" />
+      <xs:element name="validate" type="tns:validate" />
+      <xs:element name="validateDQA" type="tns:validateDQA" />
+      <xs:element name="validateDQAResponse" type="tns:validateDQAResponse" />
+      <xs:element name="validateResponse" type="tns:validateResponse" />
+      <xs:element name="validateWithResources" type="tns:validateWithResources" />
+      <xs:element name="validateWithResourcesResponse" type="tns:validateWithResourcesResponse" />
+      <xs:complexType name="validate">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+          <xs:element minOccurs="0" name="arg3" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="validateResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="loadResource">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="loadResourceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="validateDQA">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+          <xs:element minOccurs="0" name="arg3" type="xs:string" />
+          <xs:element minOccurs="0" name="arg4" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="validateDQAResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="validateWithResources">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+          <xs:element minOccurs="0" name="arg3" type="xs:string" />
+          <xs:element minOccurs="0" name="arg4" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="validateWithResourcesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getServiceStatus">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getServiceStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="loadResourceResponse">
+    <wsdl:part name="parameters" element="ns1:loadResourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="getServiceStatusResponse">
+    <wsdl:part name="parameters" element="ns1:getServiceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="validateResponse">
+    <wsdl:part name="parameters" element="ns1:validateResponse" />
+  </wsdl:message>
+  <wsdl:message name="loadResource">
+    <wsdl:part name="parameters" element="ns1:loadResource" />
+  </wsdl:message>
+  <wsdl:message name="validateDQA">
+    <wsdl:part name="parameters" element="ns1:validateDQA" />
+  </wsdl:message>
+  <wsdl:message name="validateWithResourcesResponse">
+    <wsdl:part name="parameters" element="ns1:validateWithResourcesResponse" />
+  </wsdl:message>
+  <wsdl:message name="validateDQAResponse">
+    <wsdl:part name="parameters" element="ns1:validateDQAResponse" />
+  </wsdl:message>
+  <wsdl:message name="getServiceStatus">
+    <wsdl:part name="parameters" element="ns1:getServiceStatus" />
+  </wsdl:message>
+  <wsdl:message name="validate">
+    <wsdl:part name="parameters" element="ns1:validate" />
+  </wsdl:message>
+  <wsdl:message name="validateWithResources">
+    <wsdl:part name="parameters" element="ns1:validateWithResources" />
+  </wsdl:message>
+  <wsdl:portType name="MessageValidationV2Interface">
+    <wsdl:operation name="validate">
+      <wsdl:input name="validate" message="ns1:validate" />
+      <wsdl:output name="validateResponse" message="ns1:validateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="loadResource">
+      <wsdl:input name="loadResource" message="ns1:loadResource" />
+      <wsdl:output name="loadResourceResponse" message="ns1:loadResourceResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="validateDQA">
+      <wsdl:input name="validateDQA" message="ns1:validateDQA" />
+      <wsdl:output name="validateDQAResponse" message="ns1:validateDQAResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="validateWithResources">
+      <wsdl:input name="validateWithResources" message="ns1:validateWithResources" />
+      <wsdl:output name="validateWithResourcesResponse" message="ns1:validateWithResourcesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getServiceStatus">
+      <wsdl:input name="getServiceStatus" message="ns1:getServiceStatus" />
+      <wsdl:output name="getServiceStatusResponse" message="ns1:getServiceStatusResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
