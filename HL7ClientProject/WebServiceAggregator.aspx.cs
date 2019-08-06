@@ -192,10 +192,6 @@ namespace HL7ClientProject
                     // LblValidateWithResources.Text = client.validateWithResources(text, profile, constraints, valueSetLibrary, messageId);
                     // ValidateWithResourcesTextBox.Text = client.validateWithResources(text, profile, constraints, valueSetLibrary, messageId);
 
-                    //these lines below grab the message ID value from the profile for the Validate With Resources method
-                    WebServiceAggregator.messageId1 = XDocument.Load(@"C:\Users\Owner\source\repos\HL7ClientProject\HL7ClientProject\UploadProfile\" + filename2).Root
-                       .Descendants("Message")
-                       .Select(element => element.Attribute("ID").Value).FirstOrDefault();
                // }
                // catch (Exception ex)
                // {
@@ -248,29 +244,30 @@ namespace HL7ClientProject
 
             //This code below checks for the correct extension in the filename. If the filename is still empty as we declared at top, it is missing.
 
-           if ((!(filename1.Contains(".txt"))))
-           {
-              Response.Write("<script>alert('ERROR: Your Message input does not exist or uses the incorrect extention, should be .TXT. Please try again.')</script>");
-           }
-
-           if  (!(filename2.Contains(".xml"))){
+           if  (!(filename2.Contains(".xml" )) || filename2 == "")
+            {
 
                 Response.Write("<script>alert('ERROR: Your Profile input does not exist or uses the incorrect extention, should be .XML. Please try again.')</script>");
-
             }
 
-            if (!(filename3.Contains(".xml")))
+   
+            if (!(filename3.Contains(".xml")) || filename3 == "")
             {
 
                 Response.Write("<script>alert('ERROR: Your Constraints input does not exist or uses the incorrect extention, should be .XML. Please try again.')</script>");
 
             }
 
-            if (!(filename4.Contains(".xml")))
+            if (!(filename4.Contains(".xml")) || filename4 == "")
             {
 
                 Response.Write("<script>alert('ERROR: Your Value Set Library input does not exist or uses the incorrect extention, should be .XML. Please try again.')</script>");
 
+            }
+
+            if ((!(filename1.Contains(".txt")) || filename1 == ""))
+            {
+                Response.Write("<script>alert('ERROR: Your Message input does not exist or uses the incorrect extention, should be .TXT. Please try again.')</script>");
             }
 
 
@@ -280,6 +277,12 @@ namespace HL7ClientProject
             {
                 try
                 {
+                        //these lines below grab the message ID value from the profile for the Validate With Resources method
+                        WebServiceAggregator.messageId1 = XDocument.Load(@"C:\Users\Owner\source\repos\HL7ClientProject\HL7ClientProject\UploadProfile\" + filename2).Root
+                           .Descendants("Message")
+                           .Select(element => element.Attribute("ID").Value).FirstOrDefault();
+
+
                     //then display the report generated from validateWithResources in the text box. Notice we use message ID at the end which we grabbed in our profile upload code above
 
                     ValidateWithResourcesTextBox.Text = client.validateWithResources(WebServiceAggregator.message1, WebServiceAggregator.profile1, WebServiceAggregator.constraints1, WebServiceAggregator.valueSetLibrary1, WebServiceAggregator.messageId1);
